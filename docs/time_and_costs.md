@@ -26,6 +26,7 @@ Provisioning the environment manually in the GCP Console would require:
 Automation reduced provisioning time from ~50 minutes to ~3 minutes,
 making deployments roughly 17× faster than manual configuration.
 
+
 # 2. Cost Analysis
 
 ## 2.1 Based on actual Billing Reports
@@ -49,6 +50,7 @@ Real measured cost so far: **0 USD**
 
 **Total estimated cost with Free Tier ~6.11 USD/month**
 
+
 # 3. Interpretation
 
 ## Cost Efficiency
@@ -63,6 +65,7 @@ Terraform and Cloud Build enable:
 - Consistent deployments with zero manual clicking  
 - Full reproducibility across environments  
 - Lower risk of misconfiguration  
+
 
 # 4. Conclusion
 
