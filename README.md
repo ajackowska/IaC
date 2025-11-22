@@ -90,6 +90,45 @@ Manages automated Terraform CI/CD pipeline integration with GitHub.
   - VM user (for SSH access)
 - Enables essential APIs (Cloud Build).
 
+### **Monitoring Module**
+
+Provides GCP Monitoring and Logging for alerts and observability.
+
+#### **Features**
+
+##### 🚨 High CPU Alert Policy
+Creates an alerting policy that notifies when VM CPU utilization stays above **80% for 60 seconds**.  
+  The alert is delivered via the configured email notification channel.
+
+---
+
+##### 📬 Email Notification Channel
+Defines an email-based notification channel used by all alert policies created in the module.
+
+---
+
+##### 🗄 Logs Storage Bucket
+Creates a dedicated GCS bucket for storing exported ERROR logs.
+
+---
+
+#### **Inputs**
+
+| Name          | Description                          |
+|---------------|--------------------------------------|
+| `project_id`  | GCP Project ID                       |
+| `region`      | Region for the logs bucket           |
+| `alert_email` | Email address for alert notifications |
+
+---
+
+#### **Outputs**
+
+| Name                        | Description                                 |
+|-----------------------------|---------------------------------------------|
+| `alert_policy_id`           | Name of the created CPU alert policy        |
+| `notification_channel_id`   | ID of the email notification channel        |
+
 ### **Network Module**
 
 Creates a VPC, subnets, and firewall rules for SSH, HTTP, and internal communication.
